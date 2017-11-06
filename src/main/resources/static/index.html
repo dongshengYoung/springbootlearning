@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script type="text/javascript" src="js/jquery.min.js" ></script>
+		<script>
+			$(function(){
+				$("#button").click(function(){
+					$.ajax({
+						type:"PUT",
+						url:"setting/server",
+						contentType:"application/json;charset=utf-8",
+						async:true,
+						dataType:"json",
+						data:JSON.stringify({"response":"asdf","dtulog":"{'recv':'3','send':'3'}"})
+					});
+				})
+			})
+			
+		</script>
+	</head>
+
+	<body>
+		
+			<table width="500px" border="1px">
+				<tr style="border: 1,red,double;">
+					<td><input type="button"  id="button" value="发送修改数据" /></td>
+					
+
+				</tr>
+				
+			</table>
+
+
+	</body>
+
+</html>
